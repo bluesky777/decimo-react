@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import Main from "./main/Main";
+import MiModal from './ventanas/MiModal';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'firebase/firestore';
+import { FirebaseAppProvider } from 'reactfire';
+import firebaseConfig from './firebaseConfig'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <MiModal />
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

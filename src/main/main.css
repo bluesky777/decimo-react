@@ -1,0 +1,8 @@
+.encabezado, ol{
+    border: 1px solid #000;
+    float: left;
+    height: 200px;
+}
+ol{
+    width: 200
+}
